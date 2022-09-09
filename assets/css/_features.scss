@@ -1,3 +1,140 @@
 .features {
+    position: relative;
     margin: 5rem 0;
+    &-title {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        width: min(90%, 500px);
+        margin-left: auto;
+        margin-right: auto;
+
+        h3 {
+            color: var(--clr-dark-blue);
+            font-size: calc(1.25rem + 1vw);
+            margin-bottom: 0;
+            margin-bottom: 2rem;
+        }
+        p {
+            color: var(--clr-grayish-blue);
+            margin-bottom: 0;
+            font-size: calc(0.9rem + 0.25vw);
+        }
+    }
+    &-body {
+        margin-top: 75px;
+
+        .body-links {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+
+            > a {
+                width: 244px;
+                text-decoration: none;
+                border-bottom: 1px solid var(--clr-grayish-blue);
+                padding-bottom: 25px;
+                cursor: pointer;
+            }
+            .bookmarking {
+                color: var(--clr-dark-blue);
+                border-bottom: 4px solid var(--clr-soft-red);
+            }
+            .searching {
+                color: var(--clr-grayish-blue);
+            }
+            .sharing {
+                color: var(--clr-grayish-blue);
+            }
+        }
+        .body-parts {
+            .part-one {
+                margin-top: 4rem;
+                .parts-description {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 1.6rem;
+                    padding-left: 6rem;
+
+                    h1 {
+                        color: var(--clr-dark-blue);
+                        font-size: calc(1.25rem + 1vw);
+                        margin-bottom: 0;
+                    }
+                    p {
+                        color: var(--clr-grayish-blue);
+                        margin-bottom: 0;
+                        font-size: calc(0.75rem + 0.5vw);
+                    }
+                }
+
+                .banner {
+                    display: block;
+                    margin-right: auto;
+                    position: relative;
+                    right: 0;
+                    width: 100%;
+                }
+                .bg {
+                    width: min(40%, 570px);
+                    aspect-ratio: 3/2;
+                    background-color: var(--clr-soft-blue);
+                    position: absolute;
+                    z-index: -1;
+                    left: 0;
+                    top: 26rem;
+                    border-radius: 0 0 10rem 0;
+                }
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .features-body {
+                margin-top: 35px;
+                .body-links {
+                    align-items: center;
+                    flex-direction: column;
+
+                    > a {
+                        width: 100%;
+                        padding: 16px 0;
+                    }
+                    .bookmarking {
+                        border-top: 1px solid var(--clr-grayish-blue);
+                    }
+                }
+            }
+            .body-parts {
+                display: flex;
+                justify-content: center;
+                .parts-description {
+                    text-align: center;
+                    align-items: center;
+                    margin-top: 2rem;
+                    padding: 16px !important;
+                }
+                .part-one {
+                    margin-top: 0;
+                    .banner {
+                        position: static;
+                        margin: 1rem auto 0 auto;
+                        right: 0 !important;
+                        width: 80%;
+                    }
+                    .bg {
+                        height: 23%;
+                        width: 70%;
+                        z-index: -1;
+                        top: 85%;
+                        right: -20%;
+                        position: absolute;
+                        display: block;
+                        border-radius: 0 0 100px 0;
+                    }
+                }
+            }
+        }
+    }
 }
