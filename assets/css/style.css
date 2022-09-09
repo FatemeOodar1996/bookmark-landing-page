@@ -12,7 +12,7 @@
 .button {
   border: none;
   border-radius: 5px;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.75rem;
   text-decoration: none;
   display: inline-block;
   font-size: 13px;
@@ -20,33 +20,50 @@
 
 .button-red {
   background-color: var(--clr-soft-red);
+  border: 2px solid var(--clr-soft-red);
   color: var(--clr-white);
+  transition: all 0.2s ease-out;
+  font-weight: 500;
+  box-shadow: 0px 11px 19px -11px rgba(116, 116, 116, 0.801);
 }
 .button-red:hover {
-  color: var(--clr-white);
-  background-color: var(--clr-soft-red);
+  color: var(--clr-soft-red);
+  background-color: var(--clr-white);
+  border: 2px solid var(--clr-soft-red);
+  cursor: pointer;
+  font-weight: 500;
 }
 
 .button-blue {
   background-color: var(--clr-soft-blue);
+  border: 2px solid var(--clr-soft-blue);
   color: var(--clr-white);
+  transition: all 0.2s ease-out;
+  font-weight: 500;
+  box-shadow: 0px 11px 19px -11px rgba(116, 116, 116, 0.801);
 }
 .button-blue:hover {
-  color: var(--clr-white);
-  background-color: var(--clr-soft-blue);
+  color: var(--clr-soft-blue);
+  background-color: var(--clr-white);
+  border: 2px solid var(--clr-soft-blue);
+  cursor: pointer;
+  font-weight: 500;
 }
 
-.button-gray {
-  background-color: var(--clr-grayish-blue);
+.button-light-gray {
+  background-color: var(--clr-light-gray);
+  border: 2px solid var(--clr-light-gray);
   color: var(--clr-dark-blue);
+  transition: all 0.2s ease-out;
+  font-weight: 500;
+  box-shadow: 0px 11px 19px -11px rgba(116, 116, 116, 0.801);
 }
-.button-gray:hover {
-  color: var(--clr-dark-blue);
-  background-color: var(--clr-grayish-blue);
-}
-
-body {
-  font-family: "Rubik";
+.button-light-gray:hover {
+  color: var(--clr-light-gray);
+  background-color: var(--clr-white);
+  border: 2px solid var(--clr-light-gray);
+  cursor: pointer;
+  font-weight: 500;
 }
 
 header {
@@ -61,7 +78,7 @@ header .button-login {
   text-transform: uppercase;
 }
 header .navbar-nav {
-  gap: 2rem;
+  gap: 2.8rem;
 }
 header .navbar-nav .nav-link {
   font-weight: 500;
@@ -70,6 +87,11 @@ header .navbar-nav .nav-link {
   font-size: 13px;
   text-transform: uppercase;
   padding: 0 !important;
+  transition: 0.2s ease-out;
+}
+header .navbar-nav .nav-link:hover {
+  cursor: pointer;
+  color: var(--clr-soft-red);
 }
 header .button-login-sm {
   width: 100%;
@@ -100,7 +122,6 @@ header .social {
   .navbar-offcanvas.offcanvas-end {
     width: 100%;
     background-color: var(--clr-trasparent-blue);
-    opacity: 0.8;
     color: var(--clr-white);
     padding: 1rem 1rem 3rem 1rem;
   }
@@ -138,4 +159,90 @@ header .social {
     padding-top: 20px;
     border-top: 0.5px solid var(--clr-grayish-blue);
   }
+}
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.hero-buttons .button-light-gray:hover {
+  border: 2px solid var(--clr-dark-blue);
+  color: var(--clr-dark-blue);
+}
+.hero-description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.hero-description h1 {
+  color: var(--clr-dark-blue);
+  font-size: calc(2rem + 1vw);
+  margin-bottom: 0;
+}
+.hero-description p {
+  color: var(--clr-grayish-blue);
+  margin-bottom: 0;
+  font-size: calc(0.75rem + 0.5vw);
+}
+.hero-images {
+  position: relative;
+  height: 79vh;
+}
+.hero-images img {
+  z-index: 2;
+  position: absolute;
+  bottom: 5;
+  width: 115%;
+}
+.hero-images span {
+  content: "";
+  background-color: var(--clr-soft-blue);
+  height: 350px;
+  width: 95%;
+  border-radius: 0 0 0 35%;
+  z-index: 1;
+  bottom: 0;
+  right: -120px;
+  position: absolute;
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .hero-description {
+    text-align: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .hero-buttons .button-light-gray,
+.hero-buttons .button-blue {
+    padding: 12px;
+  }
+  .hero-images {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-images img {
+    position: static;
+    height: 80%;
+    width: auto;
+  }
+  .hero-images span {
+    height: 60%;
+    width: 90%;
+    z-index: -1;
+    bottom: 10%;
+    right: -20%;
+    position: absolute;
+    display: block;
+    border-radius: 0 0 0 30%;
+  }
+}
+
+.features {
+  margin: 5rem 0;
+}
+
+body {
+  font-family: "Rubik";
+  overflow-x: hidden;
 }

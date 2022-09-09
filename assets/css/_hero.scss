@@ -1,0 +1,82 @@
+.hero {
+    &-buttons {
+        display: flex;
+        gap: 1rem;
+        .button-light-gray:hover {
+            border: 2px solid var(--clr-dark-blue);
+            color: var(--clr-dark-blue);
+        }
+    }
+    &-description {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        h1 {
+            color: var(--clr-dark-blue);
+            font-size: calc(2rem + 1vw);
+            margin-bottom: 0;
+        }
+        p {
+            color: var(--clr-grayish-blue);
+            margin-bottom: 0;
+            font-size: calc(0.75rem + 0.5vw);
+        }
+    }
+    &-images {
+        position: relative;
+        height: 79vh;
+        img {
+            z-index: 2;
+            position: absolute;
+            bottom: 5;
+            width: 115%;
+        }
+        span {
+            content: "";
+            background-color: var(--clr-soft-blue);
+            height: 350px;
+            width: 95%;
+            border-radius: 0 0 0 35%;
+            z-index: 1;
+            bottom: 0;
+            right: -120px;
+            position: absolute;
+            display: block;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &-description {
+            text-align: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        &-buttons {
+            .button-light-gray,
+            .button-blue {
+                padding: 12px;
+            }
+        }
+        &-images {
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            img {
+                position: static;
+                height: 80%;
+                width: auto;
+            }
+            span {
+                height: 60%;
+                width: 90%;
+                z-index: -1;
+                bottom: 10%;
+                right: -20%;
+                position: absolute;
+                display: block;
+                border-radius: 0 0 0 30%;
+            }
+        }
+    }
+}

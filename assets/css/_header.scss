@@ -1,0 +1,101 @@
+header {
+    .offcanvas-body {
+        display: flex;
+        flex-direction: column;
+    }
+    margin: 2rem 0;
+    .button-login {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    .navbar-nav {
+        gap: 2.8rem;
+        .nav-link {
+            font-weight: 500;
+            color: var(--clr-dark-blue);
+            letter-spacing: 1px;
+            font-size: 13px;
+            text-transform: uppercase;
+            padding: 0 !important;
+            transition: 0.2s ease-out;
+            &:hover {
+                cursor: pointer;
+                color: var(--clr-soft-red);
+            }
+        }
+    }
+    .button-login-sm {
+        width: 100%;
+        border: 2px solid var(--clr-white);
+        text-align: center;
+        color: var(--clr-white);
+        font-weight: 500;
+        font-size: 19px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 8px 32px;
+        margin-top: 20px;
+    }
+    .button-close {
+        svg > path {
+            fill: var(--clr-light-gray);
+        }
+    }
+    .social {
+        display: flex;
+        gap: 2.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        .navbar-nav {
+            gap: 0rem;
+        }
+    }
+
+    .navbar-offcanvas.offcanvas-end {
+        width: 100%;
+        background-color: var(--clr-trasparent-blue);
+        color: var(--clr-white);
+        padding: 1rem 1rem 3rem 1rem;
+        .offcanvas-title > a {
+            > svg g path {
+                fill: var(--clr-white);
+            }
+            svg .mark circle {
+                fill: var(--clr-white);
+            }
+            > svg .mark path {
+                fill: var(--clr-dark-blue);
+            }
+        }
+        .button-close {
+            background-color: transparent;
+            padding: 0;
+            > svg path {
+                fill: var(--clr-white);
+            }
+        }
+        .nav-link {
+            color: var(--clr-white);
+            font-weight: lighter;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .nav-item {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 0.5px solid var(--clr-grayish-blue);
+        }
+        .top-border {
+            padding-top: 20px;
+            border-top: 0.5px solid var(--clr-grayish-blue);
+        }
+    }
+}
