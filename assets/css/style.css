@@ -192,13 +192,12 @@ header .social {
   display: block;
   margin-left: auto;
   position: relative;
-  right: -5rem;
-  top: 15;
+  right: 0;
   width: 100%;
 }
 .hero .hero-bg {
   width: min(40%, 570px);
-  aspect-ratio: 3/2;
+  aspect-ratio: 3/1.75;
   background-color: var(--clr-soft-blue);
   position: absolute;
   z-index: -1;
@@ -226,7 +225,7 @@ header .social {
     right: 0 !important;
   }
   .hero .hero-bg {
-    height: 40%;
+    height: 38%;
     width: 90%;
     z-index: -1;
     bottom: 45%;

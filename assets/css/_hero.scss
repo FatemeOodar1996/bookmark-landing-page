@@ -29,13 +29,13 @@
         display: block;
         margin-left: auto;
         position: relative;
-        right: -5rem;
-        top: 15;
+        right: 0;
+        // top: 15;
         width: 100%;
     }
     .hero-bg {
         width: min(40%, 570px);
-        aspect-ratio: 3/2;
+        aspect-ratio: 3/1.75;
         background-color: var(--clr-soft-blue);
         position: absolute;
         z-index: -1;
@@ -65,7 +65,7 @@
                 right: 0 !important;
             }
             &-bg {
-                height: 40%;
+                height: 38%;
                 width: 90%;
                 z-index: -1;
                 bottom: 45%;
