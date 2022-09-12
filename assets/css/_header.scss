@@ -36,6 +36,12 @@ header {
         padding: 8px 32px;
         margin-top: 20px;
     }
+    .button-login-sm:hover {
+        border: 2px solid var(--clr-soft-red);
+        background-color: var(--clr-soft-red) !important;
+        color: var(--clr-white);
+        transition: all 0.2s ease-in;
+    }
     .button-close {
         svg > path {
             fill: var(--clr-light-gray);
@@ -46,6 +52,11 @@ header {
         gap: 2.5rem;
         justify-content: center;
         align-items: center;
+    }
+    .social svg > path:hover {
+        fill: var(--clr-soft-red);
+        cursor: pointer;
+        transition: all 0.2s ease-out;
     }
 }
 
@@ -77,6 +88,9 @@ header {
             padding: 0;
             > svg path {
                 fill: var(--clr-white);
+            }
+            > svg path:hover {
+                fill: var(--clr-soft-red);
             }
         }
         .nav-link {
