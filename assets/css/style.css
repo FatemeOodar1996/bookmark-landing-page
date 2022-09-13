@@ -106,6 +106,12 @@ header .button-login-sm {
   padding: 8px 32px;
   margin-top: 20px;
 }
+header .button-login-sm:hover {
+  border: 2px solid var(--clr-soft-red);
+  background-color: var(--clr-soft-red) !important;
+  color: var(--clr-white);
+  transition: all 0.2s ease-in;
+}
 header .button-close svg > path {
   fill: var(--clr-light-gray);
 }
@@ -114,6 +120,11 @@ header .social {
   gap: 2.5rem;
   justify-content: center;
   align-items: center;
+}
+header .social svg > path:hover {
+  fill: var(--clr-soft-red);
+  cursor: pointer;
+  transition: all 0.2s ease-out;
 }
 
 @media screen and (max-width: 767px) {
@@ -141,6 +152,9 @@ header .social {
   }
   .navbar-offcanvas.offcanvas-end .button-close > svg path {
     fill: var(--clr-white);
+  }
+  .navbar-offcanvas.offcanvas-end .button-close > svg path:hover {
+    fill: var(--clr-soft-red);
   }
   .navbar-offcanvas.offcanvas-end .nav-link {
     color: var(--clr-white);
