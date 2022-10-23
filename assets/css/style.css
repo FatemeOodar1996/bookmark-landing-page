@@ -580,10 +580,16 @@ header .social svg > path:hover {
   gap: 1rem;
   display: flex;
   margin-top: 2rem;
+  justify-content: center;
+}
+.contact-us .contact-us-body .sendEmail #result {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  display: none;
 }
 .contact-us .contact-us-body .sendEmail input {
-  width: 70%;
-  padding: 12px 16px;
+  width: 100%;
+  padding: 14px 16px;
   font-size: 13px;
   border-radius: 5px;
   border: none;
